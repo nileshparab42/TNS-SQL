@@ -1,3 +1,12 @@
+## Deleting Existing Tables
+```
+DROP TABLE Customers;
+DROP TABLE Department;
+DROP TABLE Employee;
+DROP TABLE Shippings;
+DROP TABLE Orders;
+```
+
 ## Creating Table and Inserting Data
 ```
 CREATE TABLE employees (
