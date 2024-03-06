@@ -97,21 +97,21 @@ In SQL, column attributes are properties that define the characteristics of a co
 
 **1. Data Type:** Specifies the type of data that can be stored in the column, such as INTEGER, VARCHAR, DATE, etc. Each data type has specific storage requirements and rules for data manipulation.
 
-2. Length/Size: For character data types like VARCHAR, CHAR, TEXT, etc., the length or size attribute specifies the maximum number of characters that can be stored in the column.
+**2. Length/Size:** For character data types like VARCHAR, CHAR, TEXT, etc., the length or size attribute specifies the maximum number of characters that can be stored in the column.
 
-3. Primary Key: A column or combination of columns that uniquely identifies each row in the table. It ensures that each row has a unique identifier and helps enforce entity integrity.
+**3. Primary Key:** A column or combination of columns that uniquely identifies each row in the table. It ensures that each row has a unique identifier and helps enforce entity integrity.
 
-4. Foreign Key: A column or combination of columns that establishes a link between two tables by referencing the primary key or a unique key in another table. It enforces referential integrity by ensuring that values in the foreign key column exist in the referenced table.
+**4. Foreign Key:** A column or combination of columns that establishes a link between two tables by referencing the primary key or a unique key in another table. It enforces referential integrity by ensuring that values in the foreign key column exist in the referenced table.
 
-5. NOT NULL Constraint: Specifies that the column cannot contain NULL values, ensuring that every row must have a value for that column.
+**5. NOT NULL Constraint:** Specifies that the column cannot contain NULL values, ensuring that every row must have a value for that column.
 
-6. UNIQUE Constraint: Ensures that all values in the column are unique across the table, except for NULL values. It prevents duplicate values from being inserted into the column.
+**6. UNIQUE Constraint:** Ensures that all values in the column are unique across the table, except for NULL values. It prevents duplicate values from being inserted into the column.
 
-7. DEFAULT Constraint: Specifies a default value for the column if no value is provided during INSERT operations. It assigns the default value to the column when a new row is added to the table.
+**7. DEFAULT Constraint:** Specifies a default value for the column if no value is provided during INSERT operations. It assigns the default value to the column when a new row is added to the table.
 
-8. CHECK Constraint: Defines a condition that must be satisfied for the data in the column. It restricts the range of allowed values based on the specified condition.
+**8. CHECK Constraint:** Defines a condition that must be satisfied for the data in the column. It restricts the range of allowed values based on the specified condition.
 
-9. Auto Increment/Identity: Automatically generates a unique value for the column when a new row is inserted into the table. It is commonly used for primary key columns to ensure unique identifiers for each row.
+**9. Auto Increment/Identity:** Automatically generates a unique value for the column when a new row is inserted into the table. It is commonly used for primary key columns to ensure unique identifiers for each row.
 
 Here's an example of creating a table with some of these column attributes:
 
@@ -126,11 +126,6 @@ CREATE TABLE employees (
 );
 ```
 
-In this example, the `employees` table has columns with various attributes:
-- `employee_id` is the primary key column.
-- `name` is a VARCHAR column with a NOT NULL constraint.
-- `department_id` is an INT column that serves as a foreign key referencing the `department_id` column in the `departments` table.
-- `salary` is a DECIMAL column with a DEFAULT constraint, which assigns a default value of 0 if no value is provided during INSERT.
-- `hire_date` is a DATE column without any additional constraints.
-
-These attributes help define the structure and behavior of columns in SQL tables, ensuring data integrity and consistency.
+## Inserting a Single Row 
+## Inserting a Multiple Row 
+## Inserting Hierarchical Rows
