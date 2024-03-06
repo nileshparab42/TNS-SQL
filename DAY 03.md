@@ -60,6 +60,12 @@ UNION
 SELECT department_id, name FROM departments;
 ```
 
+## Delete Data
+```sql
+DROP TABLE Departments;
+DROP TABLE Employees;
+```
+
 ## Natural Join
 ```sql
 Create Table department
@@ -83,9 +89,9 @@ INSERT INTO employee(EMP_ID, EMP_NAME, DEPT_NAME) VALUES (2, "JOEL", "IT");
 INSERT INTO employee(EMP_ID, EMP_NAME, DEPT_NAME) VALUES (3, "BISWA", "MARKETING");
 INSERT INTO employee(EMP_ID, EMP_NAME, DEPT_NAME) VALUES (4, "VAIBHAV", "IT");
 INSERT INTO employee(EMP_ID, EMP_NAME, DEPT_NAME) VALUES (5, "SAGAR", "SALES");
+'''
 
-
---Natural Join
+'''sql
 SELECT *
 FROM employee
 NATURAL JOIN department; 
@@ -127,5 +133,30 @@ CREATE TABLE employees (
 ```
 
 ## Inserting a Single Row 
+```sql
+INSERT INTO Employee(EMP_ID,EMP_NAME,DEPT_NAME) VALUES(6,"NILESH","IT");
+```
 ## Inserting a Multiple Row 
+```sql
+INSERT INTO Employee(EMP_ID,EMP_NAME,DEPT_NAME) VALUES(7,"ASKAN","HR"),(8,"PRAJWAL","SALES"),(9,"ROHAN","IT");
+```
 ## Inserting Hierarchical Rows
+```sql 
+DROP TABLE Department;
+DROP TABLE Employee;
+```
+```sql
+CREATE TABLE categories (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    parent_id INT,
+    FOREIGN KEY (parent_id) REFERENCES categories(id)
+);
+```
+```sql
+INSERT INTO categories (id, name, parent_id) VALUES (1,'Electronics', NULL);
+```
+```sql
+INSERT INTO categories (id, name, parent_id) VALUES (2,'Laptops', 1);
+INSERT INTO categories (id, name, parent_id) VALUES (3,'Cameras', 1);
+```
